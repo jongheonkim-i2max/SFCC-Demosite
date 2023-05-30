@@ -1,0 +1,39 @@
+.slick-dots{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:40px;
+  @include mediaQuery(768px){
+    margin-top:30px;
+  }
+  @include mediaQuery(480px){
+    margin-top:20px;
+  }
+  li{
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background: rgba(0,0,0,0.2);
+    margin-right:15px;
+    cursor: pointer;
+    @include mediaQuery(768px){
+      width:12px;
+      height:12px;
+    }
+    @include mediaQuery(480px){
+      width:10px;
+      height:10px;
+      margin-right:10px;
+    }
+
+    &.slick-active{
+      background: var(--color-coral);
+    }
+    &:last-child{
+      margin-right:0;
+    }
+    button{
+      display:none;
+    }
+  }
+}

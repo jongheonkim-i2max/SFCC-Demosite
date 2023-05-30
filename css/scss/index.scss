@@ -1,0 +1,21 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/reset';
+@import 'base/fonts';
+
+@import 'components/slickDot';
+@import 'components/slickArrow';
+@import 'components/buttons';
+@import 'components/icon';
+@import 'components/itemsNew';
+
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/slot01';
+@import 'layout/slot02-slot03';
+@import 'layout/slot04';
+@import 'layout/slot05';
+@import 'layout/slot06';
+@import 'layout/slot07';

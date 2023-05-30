@@ -1,0 +1,121 @@
+/*img__banner*/
+.img__banner{
+  @include commonMarginBottom;
+  .wide-container{
+      display:flex;
+
+      @include mediaQuery(1200px){
+          flex-wrap:wrap;
+      }
+  }
+  &--text{
+      width:calc(33% - 35px);
+      margin-right:70px;
+      @include mediaQuery(1800px){
+          width:calc(33% - 15px);
+          margin-right:30px;
+      }
+      @include mediaQuery(1200px){
+          width:100%;
+          margin-right:0;
+          margin-bottom:50px;
+      }
+      @include mediaQuery(480px){
+          margin-bottom:30px;
+      }
+
+      .main__common--text{
+          margin-bottom:40px;
+          @include mediaQuery(480px){
+              margin-bottom:20px;
+          }
+      }
+  }
+  &--img{
+      border-radius:80px 0 80px 0;
+      overflow:hidden;
+      //@include boxShadow;
+      @include mediaQuery(480px){
+          border-radius:60px 0 60px 0;
+      }
+      
+      img{
+          width:100%;
+      }
+
+  }
+  &--slider{
+      width:calc(67% - 35px);
+      position:relative;
+      @include mediaQuery(1800px){
+          width:calc(67% - 15px);
+      }
+      @include mediaQuery(1200px){
+          width:100%;
+      }
+      
+      .img__banner--img{
+          position:relative;
+          padding-bottom:52.5%;
+
+          img{
+              @include translate;
+          }
+      }
+      .slick-slide{
+        width:100%;
+      }
+  }
+  .slick-dots{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    margin-top:0;
+    bottom:40px;
+    @include mediaQuery(768px){
+        bottom:30px;
+    }
+    @include mediaQuery(480px){
+        bottom:20px;
+    }
+  }
+}
+.main__common--text{
+    text-align:right;
+    p{
+        font-size:40px;
+        font-weight:500;
+        @include letter(4.8px);
+        @include mediaQuery(1800px){
+            font-size:30px;
+            @include letter(3px);
+        }
+        @include mediaQuery(480px){
+            font-size:20px;
+        }
+    }
+    h5{
+        font-size:60px;
+        font-weight:300;
+        font-style:italic;
+        @include letter(6px);
+        @include mediaQuery(1800px){
+            font-size:40px;
+            @include letter(4.5px);
+        }
+        @include mediaQuery(480px){
+            font-size:28px;
+        }
+    }
+    span{
+        display:block;
+        margin-top:20px;
+        font-weight:300;
+        font-size:30px;
+        @include letter(3.6px);
+        @include mediaQuery(1800px){
+            font-size:24px;
+            @include letter(2.4px);
+        }
+    }
+  }

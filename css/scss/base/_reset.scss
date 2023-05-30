@@ -1,0 +1,57 @@
+blockquote, body, dd, dl, dt, fieldset, figure, h1, h2, h3, h4, h5, h6, hr, html, iframe, legend, li, ol, p, pre, textarea, ul{
+    margin:0;
+    padding:0
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size:100%;
+    font-weight:400
+}
+select{
+    outline:none;
+    box-shadow:none;
+}
+ul, ol{
+    list-style:none
+}
+
+button, input, select {
+    margin:0;
+    background:none;
+    outline:none;
+    box-shadow:none;
+    border:0;
+    padding:0;
+    border-radius:0;
+}
+a, a:hover, button{
+    color:var(--color-black);
+    outline:none;
+    box-shadow:none;
+    text-decoration: none;
+    cursor:pointer;
+}
+html, body{
+    box-sizing:border-box;
+    font-size:16px;
+    @include mediaQuery(768px){
+        font-size:14px;
+    }
+}
+*, ::after, ::before {
+    box-sizing:border-box;
+}
+img, video {
+    display:block;
+    height:auto;
+    max-width:100%
+}
+iframe {
+    border:0
+}
+table {
+    border-collapse:collapse;
+    border-spacing:0
+}
+td, th {
+    padding:0
+}

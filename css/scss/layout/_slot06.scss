@@ -1,0 +1,120 @@
+/*two__slider*/
+.top__slider{
+  @include commonMarginBottom;
+
+  h2{
+      font-size:60px;
+      font-weight:300;
+      font-style: italic;
+      text-align:center;
+      margin-bottom:100px;
+      @include mediaQuery(1800px){
+          font-size:40px;
+      }
+      @include mediaQuery(768px){
+          margin-bottom:40px;
+      }
+      @include mediaQuery(480px){
+          font-size:28px;
+      }
+  }
+  &--wrap{
+    display:flex;
+    align-items:center;
+    position:relative;
+    width:calc(100% - 100px);
+    margin:0 auto;
+    @include mediaQuery(1650px){
+      width:calc(100% - 80px);
+    }
+    @include mediaQuery(1200px){
+      flex-wrap:wrap;
+    }
+    @include mediaQuery(480px){
+      width:calc(100% - 30px);
+    }
+
+    .top__slider-slick{
+        width:calc(48% - 25px);
+        margin-right:50px;
+
+        @include mediaQuery(1200px){
+            width:100%;
+            margin-right:0;
+            margin-bottom:50px;
+            display:none;
+        }
+        @include mediaQuery(768px){
+            margin-bottom:40px;
+        }
+
+        .common__slider--img{
+            @include mediaQuery(1200px){
+                height:auto;
+                padding-bottom:100%;
+            }
+            img{
+                width:110%;
+                height:auto;
+
+                @include mediaQuery(1400px){
+                    width:150%;
+                    //height:auto;
+                }
+                @include mediaQuery(1200px){
+                    width:100%;
+                    //height:auto;
+                }
+            }
+        }
+    }
+    .thumb__slider-slick{
+        position:static;
+        width:calc(52% - 25px);
+        a.slick-btn{
+          top:50%;
+        }
+        .slick-dots{
+          position:absolute;
+          left:50%;
+          transform:translateX(-50%);
+        }
+        .slick-list{
+          margin:0 -20px;
+          @include mediaQuery(1200px){
+            margin:0 -7.5px;
+          }
+        }
+        .slick-slide{
+          margin:0 20px;
+          @include mediaQuery(1200px){
+            margin:0 7.5px;
+          }
+        }
+        
+        @include mediaQuery(1200px){
+            width:100%;
+        }
+    }
+  }
+  
+  .common__slider--img{
+      position:relative;
+      overflow:hidden;
+      border-radius:80px 0 80px 0;
+      height:54vh;
+      //@include boxShadow;
+      @include mediaQuery(768px){
+        border-radius:60px 0 60px 0;
+        height:40vh;
+      }
+      @include mediaQuery(768px){
+        border-radius:40px 0 40px 0;
+      }
+      img{
+          @include translate;
+          max-width:inherit;
+          height:100%;
+      }
+  }
+}

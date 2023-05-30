@@ -1,0 +1,50 @@
+input.custom-input{
+    display:block;
+    border:1px solid var(--color-Lblue);
+    width:100%;
+    height:45px;
+    line-height:45px;
+    padding:0 25px;
+    font-size:16px;
+    color:#000;
+    &::placeholder{
+        color:var(--color-Dblue);
+    }
+    &:read-only{
+        background:var(--color-Lgrey);
+    }
+    &:disabled{
+        background: var(--color-Lgrey);
+        cursor:not-allowed;
+    }
+
+    &.is-invalid{
+        border-color:var(--input-error);
+        &::placeholder{
+            color:var(--input-error);
+        }
+    }
+    &.height35{
+        height:35px;
+        line-height:35px;
+        @include mediaQuery(768px){
+            height:30px;
+            line-height:30px;
+        }
+    }
+    & + .error_msg{
+        display:none;
+    }
+    &.is-invalid + .error_msg{
+        display:block;
+        margin-top:5px;
+        font-size:10px;
+        color:var(--input-error);
+    }
+    @include mediaQuery(768px){
+        height:35px;
+        line-height:35px;
+        padding:0 15px;
+        font-size:14px;
+    }
+}

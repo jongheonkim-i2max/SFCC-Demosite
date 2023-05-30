@@ -1,0 +1,89 @@
+.slick_arrow{
+  /*
+  position:absolute;
+  width:calc(100% - 240px);
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index:3;
+
+  @include mediaQuery(1650px){
+    width:calc(100% - 30px);
+  }
+  @include mediaQuery(768px){
+    top:calc(50% - 50px);
+  }
+  @include mediaQuery(480px){
+    top:calc(50% - 25px);
+    width:calc(100% - 15px);
+  }
+  */
+}
+a.slick-btn{
+  position:absolute;
+  top:calc(50% - 100px);
+  transform: translateY(-50%);
+  width:20px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  z-index:3;
+  @include mediaQuery(480px){
+    top:calc(50% - 80px);
+  }
+  &.prev{
+    left:-45px;
+    @include mediaQuery(480px){
+      left:-20px;
+    }
+  }
+  &.next{
+    right:-45px;
+    @include mediaQuery(480px){
+      right:-20px;
+    }
+
+    &::before{
+      transform: rotate(-45deg);
+    }
+    &::after{
+      transform: rotate(45deg);
+    }
+  }
+  &::before{
+    content:"";
+    width:2px;
+    height:26px;
+    background: #000;
+    border-radius:7.5px;
+    position:absolute;
+    transform: rotate(45deg);
+    top:-1.5px;
+    left:8px;
+  }
+  &::after{
+    content:"";
+    width:2px;
+    height:26px;
+    background: #000;
+    border-radius:10px;
+    position:absolute;
+    transform: rotate(-45deg);
+    bottom:-1.5px;
+    left:8px;
+  }
+  @include mediaQuery(480px){
+    width:10px;
+    height:20px;
+    &::before{
+      width:1px;
+      height:13px;
+      left:4px;
+    }
+    &::after{
+      width:1px;
+      height:13px;
+      left:4px;
+    }
+  }
+}

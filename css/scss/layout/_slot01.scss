@@ -1,0 +1,118 @@
+.slider__banner {
+    position: relative;
+    overflow:hidden;
+    @include commonPadding;
+    //@include opacityHidden;
+    //@include transition(800ms);
+    //transform:translate(0, 100px);
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 450px;
+        background: var(--color-Lgrey);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        @include mediaQuery(991px) {
+            height: 50vw;
+        }
+
+        @include mediaQuery(480px) {
+            height: 250px;
+        }
+    }
+
+    .slick-list {
+        overflow: hidden;
+        margin: 0 -30px;
+
+        @include mediaQuery(991px) {
+            margin: 0 -15px;
+        }
+    }
+
+    .slick-slide {
+        position: relative;
+        overflow: hidden;
+        margin: 0 30px;
+        border-radius: 80px 0 80px 0;
+        //@include boxShadow;
+
+        @include mediaQuery(991px) {
+            margin: 0 15px;
+        }
+
+        @include mediaQuery(768px) {
+            border-radius: 60px 0 60px 0;
+        }
+    }
+
+    &--img {
+        display: block;
+        width: 100%;
+        padding-bottom: 117%;
+        position: relative;
+
+        img {
+            @include translate;
+            max-width: inherit;
+            height: 100%;
+        }
+
+    }
+
+    &--text {
+        position: absolute;
+        z-index: 1;
+        right: 40px;
+        text-align: right;
+        bottom: 0;
+        color: var(--color-white);
+        width: 60%;
+        height: 40%;
+
+        @include mediaQuery(768px) {
+            right: 15px;
+            width: 80%;
+            height: auto;
+            bottom: 40px;
+            padding: 0 15px;
+        }
+
+        &-subject {
+            font-size: 38px;
+            font-weight: bold;
+            word-break: keep-all;
+
+            @include mediaQuery(1500px) {
+                font-size: 24px;
+            }
+
+            @include mediaQuery(768px) {
+                font-size: 22px;
+            }
+
+            @include mediaQuery(480px) {
+                font-size: 20px;
+            }
+        }
+
+        &-desc {
+            font-size: 16px;
+            font-style: italic;
+            margin-top: 20px;
+
+            @include mediaQuery(768px) {
+                font-size: 14px;
+                margin-top: 15px;
+            }
+
+            @include mediaQuery(480px) {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
