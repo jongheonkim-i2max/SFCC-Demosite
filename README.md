@@ -22,3 +22,5 @@
 
   - PLP.html (상품리스트 / 현재 없음)
     - items.html (개별 상품)
+
+  - pages/dormant_account.html (휴면상태 페이지)
