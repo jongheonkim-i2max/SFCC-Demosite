@@ -24,3 +24,5 @@
     - items.html (개별 상품)
 
   - pages/dormant_account.html (휴면상태 페이지)
+
+  - pages/password_reset_pop.html (비밀번호 변경 팝업)
