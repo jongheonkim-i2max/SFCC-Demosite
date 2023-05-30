@@ -18,6 +18,56 @@
     }
     &.active{
         @include opacityVisible;
+        
+    }
+
+    &.popRenewalPop{
+        width:570px;
+        padding:70px 80px;
+        @include mediaQuery(768px){
+            width:calc(100% - 30px);
+            padding:30px 20px;
+        }
+        border-radius:0;
+
+        .pop_title{
+            margin-bottom:50px;
+            @include mediaQuery(768px){
+                margin-bottom:30px;
+            }
+            &.center{
+                justify-content:center;
+            }
+        }
+        
+        .popRenewalPop_close{
+            position:absolute;
+            top:27px;
+            right:27px;
+            border:0;
+            width:20px;
+            height:20px;
+            span{
+                height:26px;
+                border-radius:13px;
+            }
+            @include mediaQuery(768px){
+                top:15px;
+                right:15px;
+                width:15px;
+                height:15px;
+                span{
+                    height:20px;
+                    border-radius:10px;
+                }
+            }
+        }
+
+        .pop_content{
+            border:0;
+            box-shadow:none;
+            padding:0;
+        }
     }
 
     &_bg{
@@ -157,9 +207,19 @@
             }
         }
 
+        .pop_common--input,
+        .pop_common--button{
+            margin-bottom:10px;
+            &:last-child{
+                margin-bottom:0;
+            }
+            button, a{
+                color: var(--color-white);
+            }
+        }
+
         @include mediaQuery(768px){
             padding:20px 15px;
         }
     }
-    
 }
