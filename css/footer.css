@@ -331,6 +331,9 @@ a.naver-button, button.naver-button {
   display: block;
   margin-bottom: 15px;
 }
+.footer__link--cont > a:hover {
+  color: var(--color-white);
+}
 .footer__link--cont ul li {
   margin-bottom: 15px;
 }

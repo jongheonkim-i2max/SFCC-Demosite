@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 상품상세페이지</title>
+
+  <!--css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="../css/pdp.css" rel="stylesheet">
+
+  <!--script-->
+  <script src="../js/jquery-3.6.0.min.js"></script><!--jquery-->
+  <script src="../js/jquery-ui.min.js"></script><!--jquery-ui-->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script><!--swiper-->
+  <script defer src="../js/header.js"></script>
+  <script defer src="../js/pop_up.js"></script>
+  <script defer src="../js/pdp.js"></script>
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container wide-container d-flex">
+      <div class="header__logo">
+        <a class="header__logo--menu-btn d-block d-lg-none">
+          <span class="header__logo--line"></span>
+          <span class="header__logo--line"></span>
+          <span class="header__logo--line"></span>
+        </a>
+        <a href="../" class="logo">
+          <img src="../img/logo.svg" alt="사이트 로고">
+        </a>
+      </div>
+      <nav class="header__menu">
+        <div class="mobile__header d-lg-none">
+          <a class="header__mobile-close">
+            <span class="line"></span>
+            <span class="line"></span>
+          </a>
+          <div class="mobile__header--text">
+            <h5 class="text-white">
+              안녕하세요<br>
+              <!--로그인 하지 않았을 때-->
+              <span class="font-weight-bold">처음</span>이신가요?
+              <!--로그인 했을 때-->
+              <span class="font-weight-bold d-none">리뉴얼사이트</span><span class="d-none">님</span>
+            </h5>
+          </div>
+          <ul class="d-flex">
+            <!--로그인 하지 않았을 때-->
+            <li><a href="" class="text-white">로그인</a></li>
+            <li><a href="" class="text-white">회원가입</a></li>
+            <!--로그인 했을 때-->
+            <li class="d-none"><a href="" class="text-white">로그아웃</a></li>
+          </ul>
+        </div>
+        <ul class="header__menu--ul d-lg-flex flex-wrap align-items-center">
+          <!--서브메뉴가 있다면 has--sub-menu 추가 -->
+          <li class="header__menu--li has--sub-menu">
+            <a href="#" class="header__menu--a" data-href="#">New Arrivals</a>
+            <div class="header__menu--sub2">
+              <ul class="header__menu--ul2">
+                <!--서브메뉴가 있다면 has--sub-menu2 추가 -->
+                <li class="header__menu--li2 has--sub-menu2">
+                  <a href="#" class="header__menu--a2" data-href="#">subMenu1</a>
+                  <div class="header__menu--sub3">
+                    <ul class="header__menu--ul3">
+                      <li class="header__menu--li3">
+                        <a href="#" class="header__menu--a3">subMenu1-1</a>
+                      </li>
+                      <li class="header__menu--li3">
+                        <a href="#" class="header__menu--a3">subMenu1-2</a>
+                      </li>
+                      <li class="header__menu--li3">
+                        <a href="#" class="header__menu--a3">subMenu1-3</a>
+                      </li>
+                      <li class="header__menu--li3">
+                        <a href="#" class="header__menu--a3">subMenu1-4</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header__menu--li2">
+                  <a href="#" class="header__menu--a2">subMenu2</a>
+                </li>
+                <li class="header__menu--li2">
+                  <a href="#" class="header__menu--a2">subMenu3</a>
+                </li>
+                <li class="header__menu--li2">
+                  <a href="#" class="header__menu--a2">subMenu4</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="header__menu--li"><a href="#" class="header__menu--a">Womens</a></li>
+          <li class="header__menu--li"><a href="#" class="header__menu--a">Mens</a></li>
+          <li class="header__menu--li"><a href="#" class="header__menu--a">Gift Certificates</a></li>
+          <li class="header__menu--li"><a href="#" class="header__menu--a">Top Sellers</a></li>
+        </ul>
+      </nav>
+      <div class="header__right">
+        <div class="header__lnb-button d-flex justify-content-between align-items-center mb-2">
+          <ul class="header__lnb d-none d-lg-flex">
+            <!--로그인 하지 않았을 때-->
+            <li><a href="">로그인</a></li>
+            <li><a href="">회원가입</a></li>
+            <!--로그인 했을 때-->
+            <li class="d-none">
+              <span class="font-weight-bold">리뉴얼사이트</span><span>님</span>
+            </li>
+            <li class="d-none"><a href="">로그아웃</a></li>
+          </ul>
+          <div class="header__buttons d-flex">
+            <a href="../pages/members_login.html" class="header__buttons--mypage">
+              <img src="../img/Ic_mypage_H.png" alt="마이페이지 아이콘">
+            </a>
+            <a href="../pages/mypage_wish.html" class="header__buttons--wish">
+              <img src="../img/Ic_favorites_H.png" alt="위시리스트 아이콘">
+            </a>
+            <a href="../pages/cart.html" class="header__buttons--cart">
+              <img src="../img/Ic_cart_H.png" alt="장바구니 아이콘">
+            </a>
+          </div>
+        </div>
+        <div class="header__search">
+          <form action="">
+            <input type="text" class="header__search--input p-3" placeholder="상품을 검색해주세요">
+            <a class="header__search--close">
+              <span class="line"></span>
+              <span class="line"></span>
+            </a>
+            <button type="submit" class="header__search--button"><img src="../img/Ic_search.png" alt="검색 아이콘"></button>
+          </form>
+          <div class="header__search-keyword pt-4 pb-4 px-3">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <div class="header__search-keyword--title d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="font-weight-bold">최근 검색어</h5>
+                    <a href="" class="btn btn-primary btn-sm btn-border">전체 삭제</a>
+                  </div>
+                  <ul>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">나이키</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">조던</a>
+                      <area class="header__search-keyword--close"></area>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">운동화</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">티셔츠</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">나이키</a>
+                      <area class="header__search-keyword--close"></area>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">조던</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">운동화</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">티셔츠</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between mb-2">
+                      <a href="">나이키</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                    <li class="header__search-keyword--text d-flex align-items-center justify-content-between">
+                      <a href="">조던</a>
+                      <a class="header__search-keyword--close"></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm">
+                  <div class="header__search-keyword--title mb-3">
+                    <h5 class="font-weight-bold">인기 검색어</h5>
+                  </div>
+                  <ul>
+                    <li class="mb-2">
+                      <a href="">1. 나이키</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">2. 조던</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">3. 운동화</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">4. 티셔츠</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">5. 원피스</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">6. 바지</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">7. 셔츠</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">8. 벨트</a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">9. 에코백</a>
+                    </li>
+                    <li class="">
+                      <a href="">10. 블라우스</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--
+              <div class="row d-flex justify-content-end mt-3 pt-2 close-btn-parent">
+                <a class="close-btn">닫기</a>
+              </div>
+              -->
+            </div>
+          </div>
+          <div class="header__search-recommand pt-4 pb-4 px-3">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  <h5 class="header__search-recommand--title font-weight-bold mb-3">추천 검색어</h5>
+                  <ul>
+                    <li class="mb-2">
+                      <a href="">여성 반팔 <span class="font-weight-bold">티셔츠</span></a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">롱 슬리브 <span class="font-weight-bold">티셔츠</span></a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">그래픽 <span class="font-weight-bold">티셔츠</span></a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="">남성 <span class="font-weight-bold">티셔츠</span></a>
+                    </li>
+                    <li>
+                      <a href="">오버핏 <span class="font-weight-bold">티셔츠</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-sm">
+                  <ul class="header__search-recommand--item">
+                    <li class="mb-2">
+                      <a href="" class="d-flex align-items-end">
+                        <div class="item-img">
+                          <img src="../img/img_Productimg01.jpg" alt="검색 추천 이미지1">
+                        </div>
+                        <div class="item-info">
+                          <h5>빨간 <span class="font-weight-bold">티셔츠</span></h5>
+                          <p>139,000원</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a href="" class="d-flex align-items-end">
+                        <div class="item-img">
+                          <img src="../img/img_Productimg01.jpg" alt="검색 추천 이미지2">
+                        </div>
+                        <div class="item-info">
+                          <h5>빨간 <span class="font-weight-bold">티셔츠</span></h5>
+                          <p>139,000원</p>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="d-flex align-items-end">
+                      <a href="" class="d-flex align-items-end">
+                        <div class="item-img">
+                          <img src="../img/img_Productimg01.jpg" alt="검색 추천 이미지3">
+                        </div>
+                        <div class="item-info">
+                          <h5>빨간 <span class="font-weight-bold">티셔츠</span></h5>
+                          <p>139,000원</p>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="pdp">
+    <div class="item-breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="#">Skin care</a>
+          </li>
+          <li>
+            <a href="#">Ample</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <!--📌 PPT.10 상품정보 관련 전체 시작 -->
+    <div class="product-info">
+      <div class="container">
+        <div class="product-image">
+          <div class="swiper-container big-image">
+            <div class="swiper-wrapper">
+              <a class="swiper-slide">
+                <img src="../img/img_product1.jpg" alt="상품상세 이미지1">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product2.jpg" alt="상품상세 이미지2">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product3.jpg" alt="상품상세 이미지3">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product4.jpg" alt="상품상세 이미지4">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product5.jpg" alt="상품상세 이미지5">
+              </a>
+            </div>
+          </div>
+          <div class="swiper-container small-image">
+            <div class="swiper-wrapper">
+              <a class="swiper-slide">
+                <img src="../img/img_product1.jpg" alt="상품상세 이미지1">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product2.jpg" alt="상품상세 이미지2">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product3.jpg" alt="상품상세 이미지3">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product4.jpg" alt="상품상세 이미지4">
+              </a>
+              <a class="swiper-slide">
+                <img src="../img/img_product5.jpg" alt="상품상세 이미지5">
+              </a>
+            </div>
+            <div class="swiper-buttons">
+              <a class="swiper-button-prev swiper-button"><span class="arrow"></span></a>
+              <a class="swiper-button-next swiper-button"><span class="arrow"></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="product-text">
+          <div class="product-text__title">
+            <h1>
+              <a href="#">이너프 프로젝트</a>
+              <b>24H 유스 앰플 500ml</b>
+            </h1>
+          </div>
+          <div class="product-text__label">
+            <span class="label">사은품</span>
+          </div>
+          <div class="product-text__review">
+            <div class="items__review-count">
+              <div class="items__review">
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starR"></i>
+                <i class="ico_starG"></i>
+                <i class="ico_starG"></i>
+              </div>
+              <div class="items__count">리뷰 46</div>
+            </div>
+          </div>
+          <div class="product-text__priceShare">
+            <div class="product-text__price">
+              <div class="product-text__percent">24%</div>
+              <div class="product-text__cost">
+                <del class="product-text--regular">28,000원</del>
+                <div class="product-text__real">21,280원</div>
+              </div>
+            </div>
+            <div class="product-text__share">
+              <button class="heart">
+                <i class="ico_heartG"></i>
+                <span class="text">99+</span>
+              </button>
+              <div class="share">
+                <i class="ico_share"></i>
+                <!--📌 PPT.11 공유하기 팝업 -->
+                <div class="click_pop">
+                  <div class="click_pop-head">
+                    <div class="click_pop-title">공유하기</div>
+                    <a class="click_pop-close">
+                      <span></span>
+                      <span></span>
+                    </a>
+                  </div>
+                  <div class="click_pop-content">
+                    <ul class="sns">
+                      <li>
+                        <a href="">
+                          <img src="../img/kakao_share_icon.png" alt="카카오톡 공유하기 아이콘">
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img src="../img/facebook_share_icon.png" alt="페이스북 공유하기 아이콘">
+                        </a>
+                      </li>
+                      <li>
+                        <a class="link_copy">
+                          <span>URL</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="product-details">
+          <ul>
+            <li class="no_summary">
+              <i class="ico_seller"></i>
+              <div class="summary_subject">
+                판매자
+                <b>맘큐</b>
+              </div>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <i class="ico_delivery"></i>
+                  <div class="summary_subject">
+                    배송정보
+                  </div>
+                  <i class="ico_arrBottom"></i>
+                </summary>
+                <div class="summary_text">
+                  <span class="dot">결제완료 후 평균 2일 이내 출고(공휴일 제외)</span>
+                  <span class="dot">
+                    배송비 : 총 결제금액 50,000원 미만구매시 배송비 3,000원<br>
+                    (제주 : 6,000원 / 도서산간 : 6,000원) 추가
+                  </span>
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <i class="ico_checkout"></i>
+                  <div class="summary_subject">
+                    구매혜택
+                  </div>
+                  <i class="ico_arrBottom"></i>
+                </summary>
+                <div class="summary_text">
+                  [리멤버] 25% 할인쿠폰 (28일 후 발급)
+                  <div class="question_caption">
+                    <div class="question_caption--mark"><span>?</span></div>
+                    <div class="question_caption--hover">
+                      반려 사항은 템플릿 상세에서 확인 가능합니다.
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <i class="ico_money"></i>
+                  <div class="summary_subject">
+                    적립혜택
+                  </div>
+                  <i class="ico_arrBottom"></i>
+                </summary>
+                <div class="summary_text">
+                  포인트 1% 적립
+                </div>
+              </details>
+            </li>
+            <li>
+              <details>
+                <summary>
+                  <i class="ico_gift"></i>
+                  <div class="summary_subject">
+                    스폐셜 기프트
+                  </div>
+                  <i class="ico_arrBottom"></i>
+                </summary>
+                <div class="special">
+                  <div class="special-image"><img src="../img/img_product5.jpg" alt="헤라 마스크 이미지"></div>
+                  <div class="special-text">
+                    <b>헤라</b>
+                    <div>하이드로 카밍 마스크(견본) 23ml*5ea 1개</div>
+                  </div>
+                </div>
+              </details>
+            </li>
+          </ul>
+        </div>
+        <div class="product-price">
+          <div class="price-info">
+            <div class="price-title">24H 유스 앰플 50ML</div>
+            <div class="price-option-box">
+              <div class="price-buttons">
+                <button class="decrease">
+                  <i class="ico_decrease"></i>
+                </button>
+                <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                <button>
+                  <i class="ico_increase"></i>
+                </button>
+              </div>
+              <div class="price-price">
+                <del class="regular-price">28,000원</del>
+                <div class="send-price">21,280원</div>
+              </div>
+            </div>
+          </div>
+          <div class="price-checkout">
+            <div class="total-wrap">
+              <div class="total-count">총 <span class="count">1</span>개</div>
+              <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+            </div>
+            <div class="total-buttons two-buttons">
+              <a href="cart.html" class="large-button black-button">장바구니</a>
+              <a href="checkout.html" class="large-button coral-button">구매하기</a>
+              <!--📌 PPT.8 재입고알림 버튼 -->
+              <a class="alarm-button large-button coral-button">
+                <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                <span>재입고 알림 받기</span>
+              </a>
+              <!--📌 PPT.8 품절 버튼 -->
+              <a class="sold-out-button large-button black-button">
+                <span>품절</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- // 📌 PPT.10 상품정보 관련 전체 종료 -->
+  </section>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__link">
+        <div class="footer__link--cont">
+          <a href="" class="footer__link--head">Customer Support</a>
+          <ul class="footer__link--ul">
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Shipping</a></li>
+          </ul>
+        </div>
+        <div class="footer__link--cont">
+          <a href="" class="footer__link--head">Account</a>
+          <ul class="footer__link--ul">
+            <li><a href="">Order Status</a></li>
+            <li><a href="">Sign in or create account</a></li>
+          </ul>
+        </div>
+        <div class="footer__link--cont">
+          <a href="" class="footer__link--head">Our Company</a>
+          <ul class="footer__link--ul">
+            <li><a href="">Store Locator</a></li>
+            <li><a href="">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__select">
+        <select name="" id="">
+          <option value="English">English</option>
+          <option value="Korean">Korean</option>
+          <option value="Chinese">Chinese</option>
+        </select>
+      </div>
+      <div class="footer__copyright">
+        <h5>© 2023 I2MAX All rights reserved. This is a Demo store only</h5>
+      </div>
+      <ul class="footer__etc">
+        <li><a href="">Terms & Conditions</a></li>
+        <li><a href="">Privacy Policy</a></li>
+        <li><a href="">Site Map</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

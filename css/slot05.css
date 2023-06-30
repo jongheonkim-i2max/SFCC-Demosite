@@ -536,6 +536,19 @@ input:checked + label .ico_review {
   }
 }
 
+.ico_money {
+  width: 40px;
+  height: 40px;
+  background: url("../img/ico_money.png") no-repeat;
+  background-position: 3px 4px;
+}
+@media (max-width: 768px) {
+  .ico_money {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .ico_Bpoint {
   width: 40px;
   height: 40px;

@@ -41,6 +41,10 @@
                 font-weight:bold;
                 display:block;
                 margin-bottom:15px;
+
+                &:hover{
+                    color: var(--color-white);
+                }
             }
             ul{
                 li{
