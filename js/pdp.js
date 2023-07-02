@@ -33,6 +33,75 @@ var bigSwiper = new Swiper(".big-image", {
     },
 });
 
+
+//함께 본 상품
+var recommandSwiper = new Swiper('.recommand-slider .items-wrap', {
+    observer: true, 
+    observeParents: true,
+    slidesPerView: 3,
+    spaceBetween: 15,
+    speed: 1000,
+    allowTouchMove:true,
+    loop: false,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    dots: true,
+    breakpoints: {
+        350:{
+            slidesPerView:2,
+            spaceBetween:15,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween:15,                            
+        },
+        991:{
+            slidesPerView: 3,
+            spaceBetween:30,
+        },
+        1200:{
+            slidesPerView: 4,
+            spaceBetween:30, 
+        }
+    }
+});
+
+//주목할 상품
+var attentionSwiper = new Swiper('.attention-slider .items-wrap', {
+    observer: true, 
+    observeParents: true,
+    slidesPerView: 3,
+    spaceBetween: 15,
+    speed: 1000,
+    allowTouchMove:true,
+    loop: false,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    dots: true,
+    breakpoints: {
+        350:{
+            slidesPerView:2,
+            spaceBetween:15,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween:15,                            
+        },
+        991:{
+            slidesPerView: 3,
+            spaceBetween:30,
+        },
+        1200:{
+            slidesPerView: 4,
+            spaceBetween:30, 
+        }
+    }
+});
+
 /*📌 PPT.8 버튼관련 단순 스크립트 
     *실제 적용시 삭제 요망
 */
