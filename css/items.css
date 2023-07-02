@@ -386,6 +386,8 @@ input:checked + label .ico_review {
   .ico_money {
     width: 32px;
     height: 32px;
+    background-size: 24px 22px;
+    background-position: 4px 5px;
   }
 }
 
@@ -422,9 +424,9 @@ input:checked + label .ico_review {
 }
 @media (max-width: 768px) {
   .ico_arrBottom {
-    width: 20px;
+    width: 18px;
     height: 10px;
-    background-position: -192px -96px;
+    background-position: -191px -97px;
   }
 }
 

@@ -120,6 +120,9 @@ a.large-button, button.large-button {
   padding: 0;
   margin: 0;
 }
+a.large-button:not([href]), a.large-button:not([href]:hover), button.large-button:not([href]), button.large-button:not([href]:hover) {
+  color: var(--color-white);
+}
 a.large-button:hover, button.large-button:hover {
   color: var(--color-white);
 }
@@ -131,7 +134,7 @@ a.large-button.height50, button.large-button.height50 {
   a.large-button, button.large-button {
     height: 45px;
     line-height: 43px;
-    font-size: 16px;
+    font-size: 14px;
   }
   a.large-button.height50, button.large-button.height50 {
     height: 40px;
@@ -156,6 +159,12 @@ a.middle-button, button.middle-button {
     padding: 0 15px;
   }
 }
+a.middle-button:not([href]), a.middle-button:not([href]:hover), button.middle-button:not([href]), button.middle-button:not([href]:hover) {
+  color: var(--color-white);
+}
+a.middle-button:hover, button.middle-button:hover {
+  color: var(--color-white);
+}
 a.middle-button.height45, button.middle-button.height45 {
   height: 45px;
   line-height: 45px;
@@ -177,6 +186,12 @@ a.small-button, button.small-button {
   color: var(--color-white);
   font-size: 12px;
   font-weight: 300;
+}
+a.small-button:not([href]), a.small-button:not([href]:hover), button.small-button:not([href]), button.small-button:not([href]:hover) {
+  color: var(--color-white);
+}
+a.small-button:hover, button.small-button:hover {
+  color: var(--color-white);
 }
 @media (max-width: 768px) {
   a.small-button, button.small-button {
@@ -208,6 +223,9 @@ a.Bgrey-button, button.Bgrey-button {
   background: var(--color-Lgrey);
   color: var(--color-Dgrey);
   border: 1px solid var(--border-color);
+}
+a.Bgrey-button:not([href]), a.Bgrey-button:not([href]:hover), button.Bgrey-button:not([href]), button.Bgrey-button:not([href]:hover) {
+  color: var(--color-Dgrey);
 }
 a.coral-button, button.coral-button {
   background: var(--color-coral);

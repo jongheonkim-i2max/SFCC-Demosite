@@ -222,7 +222,8 @@ input:checked + label .ico_review{
     @include mediaQuery(768px){
         width: 32px;
         height: 32px;
-        //background-position: -288px 0px;
+        background-size:24px 22px;
+        background-position: 4px 5px;
     }
 }
 .ico_Bpoint {
@@ -250,9 +251,12 @@ input:checked + label .ico_review{
     height: 10px;
     background-position: -240px -120px;
     @include mediaQuery(768px){
-        width:20px;
+        //width:20px;
+        //height:10px;
+        //background-position:-192px -96px;
+        width:18px;
         height:10px;
-        background-position:-192px -96px;
+        background-position: -191px -97px;
     }
 }
 

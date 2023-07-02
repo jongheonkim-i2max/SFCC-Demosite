@@ -472,7 +472,9 @@
                   <div class="question_caption">
                     <div class="question_caption--mark"><span>?</span></div>
                     <div class="question_caption--hover">
-                      반려 사항은 템플릿 상세에서 확인 가능합니다.
+                      재구매 시점이 되었을 때<br>
+                      할인쿠폰을 자동으로 지급해드리는<br>
+                      재구매 할인 프로그램입니다.
                     </div>
                   </div>
                 </div>
@@ -513,47 +515,869 @@
           </ul>
         </div>
         <div class="product-price">
-          <div class="price-info">
-            <div class="price-title">24H 유스 앰플 50ML</div>
-            <div class="price-option-box">
-              <div class="price-buttons">
-                <button class="decrease">
-                  <i class="ico_decrease"></i>
-                </button>
-                <input type="text" class="option-qty" value="01" data-value="1" readonly>
-                <button>
-                  <i class="ico_increase"></i>
-                </button>
+          <!--📌 PPT.8 하단 버튼 단순 노출
+            * 실제 적용시 삭제되어야합니다.
+          -->
+          <ul class="buttonSelect pdpSelect">
+            <li class="basic active"><a>장바구니, 구매하기</a></li>
+            <li class="alarmButton"><a>재입고</a></li>
+            <li class="soldOutButton"><a>품절</a></li>
+          </ul>
+          <!--📌 PPT.12, PPT.13 상품옵션 탭 단순 보여주기식 옵션 
+            * 실제 적용시 삭제되어야합니다.
+          -->
+          <ul class="priceSelect pdpSelect">
+            <li class="basic active"><a>기본(단순 수량)</a></li>
+            <li class="selectOption"><a>선택옵션</a></li>
+            <li class="colorSize"><a>컬러, 사이즈 선택</a></li>
+          </ul>
+          <div class="price-wrap basic">
+            <div class="price-info">
+              <ul class="price-info_ul">
+                <li>
+                  <div class="price-title">24H 유스 앰플 50ML</div>
+                    <div class="price-option-box">
+                      <div class="price-buttons">
+                        <button class="decrease">
+                          <i class="ico_decrease"></i>
+                        </button>
+                        <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                        <button>
+                          <i class="ico_increase"></i>
+                        </button>
+                      </div>
+                      <div class="price-price">
+                        <del class="regular-price">28,000원</del>
+                        <div class="send-price">21,280원</div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="price-checkout">
+              <div class="total-wrap">
+                <div class="total-count">총 <span class="count">1</span>개</div>
+                <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
               </div>
-              <div class="price-price">
-                <del class="regular-price">28,000원</del>
-                <div class="send-price">21,280원</div>
+              <div class="total-buttons two-buttons">
+                <a class="cartConfirmPop_open basic-button large-button black-button">장바구니</a>
+                <a href="checkout.html" class="basic-button large-button coral-button">구매하기</a>
+                <!--📌 PPT.8 재입고알림 버튼 -->
+                <a class="restockPop_open alarm-button large-button coral-button">
+                  <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                  <span>재입고 알림 받기</span>
+                </a>
+                <!--📌 PPT.8 품절 버튼 -->
+                <a class="sold-out-button large-button black-button">
+                  <span>품절</span>
+                </a>
               </div>
             </div>
           </div>
-          <div class="price-checkout">
-            <div class="total-wrap">
-              <div class="total-count">총 <span class="count">1</span>개</div>
-              <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+          <!--📌 PPT.12 상품옵션 -->
+          <div class="price-wrap option">
+            <div class="price-select">
+              <div class="sizeGuideBtn">
+                <a class="sizeGuidePop_open">
+                  <img src="../img/ico_size.png" alt="사이즈 가이드 아이콘">
+                  <span>사이즈 가이드</span>
+                </a>
+              </div>
+              <div class="label-select">
+                <label for="">사이즈</label>
+                <select name="" id="" class="custom-select">
+                  <option value="">사이즈 선택</option>
+                  <option value="14inch">14inch</option>
+                  <option value="15inch">15inch</option>
+                </select>
+              </div>
+              <div class="label-select">
+                <label for="">쇼핑백</label>
+                <select name="" id="" class="custom-select">
+                  <option value="">쇼핑백 선택</option>
+                  <option value="쇼핑백 추가">쇼핑백 추가</option>
+                  <option value="쇼핑백 추가 안함">쇼핑백 추가 안함</option>
+                </select>
+              </div>
             </div>
-            <div class="total-buttons two-buttons">
-              <a href="cart.html" class="large-button black-button">장바구니</a>
-              <a href="checkout.html" class="large-button coral-button">구매하기</a>
-              <!--📌 PPT.8 재입고알림 버튼 -->
-              <a class="alarm-button large-button coral-button">
-                <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
-                <span>재입고 알림 받기</span>
-              </a>
-              <!--📌 PPT.8 품절 버튼 -->
-              <a class="sold-out-button large-button black-button">
-                <span>품절</span>
-              </a>
+            <div class="price-info">
+              <ul class="price-info_ul">
+                <li>
+                  <div class="price-title">14inch</div>
+                    <div class="price-option-box">
+                      <div class="price-buttons">
+                        <button class="decrease">
+                          <i class="ico_decrease"></i>
+                        </button>
+                        <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                        <button>
+                          <i class="ico_increase"></i>
+                        </button>
+                      </div>
+                      <div class="price-price">
+                        <del class="regular-price">28,000원</del>
+                        <div class="send-price">21,280원</div>
+                      </div>
+                    </div>
+                </li>
+                <li>
+                  <div class="price-title">쇼핑백 추가</div>
+                    <div class="price-option-box">
+                      <div class="price-buttons">
+                        <button class="decrease">
+                          <i class="ico_decrease"></i>
+                        </button>
+                        <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                        <button>
+                          <i class="ico_increase"></i>
+                        </button>
+                      </div>
+                      <div class="price-price">
+                        <div class="send-price">3,000원</div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="price-checkout">
+              <div class="total-wrap">
+                <div class="total-count">총 <span class="count">1</span>개</div>
+                <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+              </div>
+              <div class="total-buttons two-buttons">
+                <a class="cartConfirmPop_open basic-button large-button black-button">장바구니</a>
+                <a href="checkout.html" class="basic-button large-button coral-button">구매하기</a>
+                <!--📌 PPT.8 재입고알림 버튼 -->
+                <a class="restockPop_open alarm-button large-button coral-button">
+                  <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                  <span>재입고 알림 받기</span>
+                </a>
+                <!--📌 PPT.8 품절 버튼 -->
+                <a class="sold-out-button large-button black-button">
+                  <span>품절</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--📌 PPT.13 컬러, 사이즈 선택 -->
+          <div class="price-wrap colorSize">
+            <div class="price-color-size">
+              <div class="sizeGuideBtn">
+                <a class="sizeGuidePop_open">
+                  <img src="../img/ico_size.png" alt="사이즈 가이드 아이콘">
+                  <span>사이즈 가이드</span>
+                </a>
+              </div>
+              <div class="price-color">
+                <h5>색상</h5>
+                <ul class="color-chip">
+                  <li class="active" style="background-color: #FF5050;"><a></a></li>
+                  <li class="" style="background-color: #FF9C50;"><a></a></li>
+                  <li class="" style="background-color: #FFCB50;"><a></a></li>
+                  <li class="" style="background-color: #50FF50;"><a></a></li>
+                  <li class="" style="background-color: #50ADFF;"><a></a></li>
+                  <li class="" style="background-color: #A20082;"><a></a></li>
+                </ul>
+              </div>
+              <div class="price-size">
+                <h5>사이즈</h5>
+                <ul class="size">
+                  <li class=""><a>225</a></li>
+                  <li class=""><a>230</a></li>
+                  <li class=""><a>235</a></li>
+                  <li class=""><a>240</a></li>
+                  <li class="active"><a>245</a></li>
+                  <li class=""><a>250</a></li>
+                  <li class=""><a>255</a></li>
+                  <li class=""><a>260</a></li>
+                  <li class=""><a>265</a></li>
+                  <li class=""><a>270</a></li>
+                  <li class=""><a>275</a></li>
+                  <li class=""><a>280</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="price-info">
+              <ul class="price-info_ul">
+                <li>
+                  <div class="price-title">레드 / 245</div>
+                    <div class="price-option-box">
+                      <div class="price-buttons">
+                        <button class="decrease">
+                          <i class="ico_decrease"></i>
+                        </button>
+                        <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                        <button>
+                          <i class="ico_increase"></i>
+                        </button>
+                      </div>
+                      <div class="price-price">
+                        <del class="regular-price">28,000원</del>
+                        <div class="send-price">21,280원</div>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <div class="price-checkout">
+              <div class="total-wrap">
+                <div class="total-count">총 <span class="count">1</span>개</div>
+                <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+              </div>
+              <div class="total-buttons two-buttons">
+                <a class="cartConfirmPop_open basic-button large-button black-button">장바구니</a>
+                <a href="checkout.html" class="basic-button large-button coral-button">구매하기</a>
+                <!--📌 PPT.8 재입고알림 버튼 -->
+                <a class="restockPop_open alarm-button large-button coral-button">
+                  <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                  <span>재입고 알림 받기</span>
+                </a>
+                <!--📌 PPT.8 품절 버튼 -->
+                <a class="sold-out-button large-button black-button">
+                  <span>품절</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- // 📌 PPT.10 상품정보 관련 전체 종료 -->
+    <!-- // PPT.10 상품정보 관련 전체 종료 -->
+    <!--📌 PPT.20 상품상세, 상품리뷰, 배송/교환/반품 시작-->
+    <div class="product-content">
+      <div class="container">
+        <div class="detail-info">
+          <ul class="product-content-tab">
+            <li class="active"><a>상세정보</a></li>
+            <li><a>상품리뷰</a></li>
+            <li><a>배송/교환/반품</a></li>
+          </ul>
+          <div class="product-cont-wrap">
+            <div class="detail-cont product-cont">
+              <div class="detail">
+                <img src="../img/imgV_01.jpg" alt="상세정보 이미지">
+                <a class="detail_moreBtn">상세정보 펼처보기 <span class="arrow"></span></a>
+              </div>
+              <div class="information">
+                <h5 class="product-cont--title">상품정보고시</h5>
+                <div class="information-table">
+                  <div class="table-tr">
+                    <div class="table-th">상품정보고시</div>
+                    <div class="table-td">겉감-나일론 100%</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">색상</div>
+                    <div class="table-td">블랙, 아이보리, 민트, 스카이블루</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">치수</div>
+                    <div class="table-td">프리사이즈</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">제조사/수입자</div>
+                    <div class="table-td">㈜아이투맥스</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">제조국</div>
+                    <div class="table-td">중국</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">취급시 주의사항</div>
+                    <div class="table-td">단독 손세탁 및 드라이클라닝</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">제조연월</div>
+                    <div class="table-td">겉감-나일론 100%</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">품질보증기준</div>
+                    <div class="table-td">관련 법 및 소비자 분쟁해결 규정에 따름</div>
+                  </div>
+                  <div class="table-tr">
+                    <div class="table-th">A/S책임자 및 전화번호</div>
+                    <div class="table-td">(고객센터) 02-2015-6000</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="review-cont product-cont">
+              <div style="height:5000px; margin-top:100px; background:#666;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-price">
+          <div class="product-price">
+            <div class="price-wrap basic">
+              <div class="price-info">
+                <ul class="price-info_ul">
+                  <li>
+                    <div class="price-title">24H 유스 앰플 50ML</div>
+                      <div class="price-option-box">
+                        <div class="price-buttons">
+                          <button class="decrease">
+                            <i class="ico_decrease"></i>
+                          </button>
+                          <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                          <button>
+                            <i class="ico_increase"></i>
+                          </button>
+                        </div>
+                        <div class="price-price">
+                          <del class="regular-price">28,000원</del>
+                          <div class="send-price">21,280원</div>
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="price-checkout">
+                <div class="total-wrap">
+                  <div class="total-count">총 <span class="count">1</span>개</div>
+                  <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+                </div>
+                <div class="total-buttons two-buttons">
+                  <a class="cartConfirmPop_open basic-button large-button black-button">장바구니</a>
+                  <a href="checkout.html" class="basic-button large-button coral-button">구매하기</a>
+                  <!--📌 PPT.8 재입고알림 버튼 -->
+                  <a class="restockPop_open alarm-button large-button coral-button">
+                    <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                    <span>재입고 알림 받기</span>
+                  </a>
+                  <!--📌 PPT.8 품절 버튼 -->
+                  <a class="sold-out-button large-button black-button">
+                    <span>품절</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--📌 PPT.12 상품옵션 -->
+            <div class="price-wrap option">
+              <div class="price-select">
+                <div class="sizeGuideBtn">
+                  <a class="sizeGuidePop_open">
+                    <img src="../img/ico_size.png" alt="사이즈 가이드 아이콘">
+                    <span>사이즈 가이드</span>
+                  </a>
+                </div>
+                <div class="label-select">
+                  <label for="">사이즈</label>
+                  <select name="" id="" class="custom-select">
+                    <option value="">사이즈 선택</option>
+                    <option value="14inch">14inch</option>
+                    <option value="15inch">15inch</option>
+                  </select>
+                </div>
+                <div class="label-select">
+                  <label for="">쇼핑백</label>
+                  <select name="" id="" class="custom-select">
+                    <option value="">쇼핑백 선택</option>
+                    <option value="쇼핑백 추가">쇼핑백 추가</option>
+                    <option value="쇼핑백 추가 안함">쇼핑백 추가 안함</option>
+                  </select>
+                </div>
+              </div>
+              <div class="price-info">
+                <ul class="price-info_ul">
+                  <li>
+                    <div class="price-title">14inch</div>
+                      <div class="price-option-box">
+                        <div class="price-buttons">
+                          <button class="decrease">
+                            <i class="ico_decrease"></i>
+                          </button>
+                          <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                          <button>
+                            <i class="ico_increase"></i>
+                          </button>
+                        </div>
+                        <div class="price-price">
+                          <del class="regular-price">28,000원</del>
+                          <div class="send-price">21,280원</div>
+                        </div>
+                      </div>
+                  </li>
+                  <li>
+                    <div class="price-title">쇼핑백 추가</div>
+                      <div class="price-option-box">
+                        <div class="price-buttons">
+                          <button class="decrease">
+                            <i class="ico_decrease"></i>
+                          </button>
+                          <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                          <button>
+                            <i class="ico_increase"></i>
+                          </button>
+                        </div>
+                        <div class="price-price">
+                          <div class="send-price">3,000원</div>
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="price-checkout">
+                <div class="total-wrap">
+                  <div class="total-count">총 <span class="count">1</span>개</div>
+                  <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+                </div>
+                <div class="total-buttons two-buttons">
+                  <a class="cartConfirmPop_open basic-button large-button black-button">장바구니</a>
+                  <a href="checkout.html" class="basic-button large-button coral-button">구매하기</a>
+                  <!--📌 PPT.8 재입고알림 버튼 -->
+                  <a class="restockPop_open alarm-button large-button coral-button">
+                    <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                    <span>재입고 알림 받기</span>
+                  </a>
+                  <!--📌 PPT.8 품절 버튼 -->
+                  <a class="sold-out-button large-button black-button">
+                    <span>품절</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!--📌 PPT.13 컬러, 사이즈 선택 -->
+            <div class="price-wrap colorSize">
+              <div class="price-color-size">
+                <div class="sizeGuideBtn">
+                  <a class="sizeGuidePop_open">
+                    <img src="../img/ico_size.png" alt="사이즈 가이드 아이콘">
+                    <span>사이즈 가이드</span>
+                  </a>
+                </div>
+                <div class="price-color">
+                  <h5>색상</h5>
+                  <select name="" id="" class="custom-select">
+                    <option value="">색상</option>
+                    <option value="레드">레드</option>
+                    <option value="주황">주황</option>
+                  </select>
+                </div>
+                <div class="price-size">
+                  <h5>사이즈</h5>
+                  <select name="" id="" class="custom-select">
+                    <option value="">사이즈</option>
+                    <option value="225">225</option>
+                    <option value="230">230</option>
+                  </select>
+                </div>
+              </div>
+              <div class="price-info">
+                <ul class="price-info_ul">
+                  <li>
+                    <div class="price-title">레드 / 245</div>
+                      <div class="price-option-box">
+                        <div class="price-buttons">
+                          <button class="decrease">
+                            <i class="ico_decrease"></i>
+                          </button>
+                          <input type="text" class="option-qty" value="01" data-value="1" readonly>
+                          <button>
+                            <i class="ico_increase"></i>
+                          </button>
+                        </div>
+                        <div class="price-price">
+                          <del class="regular-price">28,000원</del>
+                          <div class="send-price">21,280원</div>
+                        </div>
+                      </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="price-checkout">
+                <div class="total-wrap">
+                  <div class="total-count">총 <span class="count">1</span>개</div>
+                  <div class="total-price"><span class="price" data-selprice="21280">21,280</span>원</div>
+                </div>
+                <div class="total-buttons two-buttons">
+                  <a class="cartConfirmPop_open basic-button large-button black-button">장바구니</a>
+                  <a href="checkout.html" class="basic-button large-button coral-button">구매하기</a>
+                  <!--📌 PPT.8 재입고알림 버튼 -->
+                  <a class="restockPop_open alarm-button large-button coral-button">
+                    <span class="icon"><img src="../img/ico_alarm.png" alt="재입고 알람 아이콘"></span>
+                    <span>재입고 알림 받기</span>
+                  </a>
+                  <!--📌 PPT.8 품절 버튼 -->
+                  <a class="sold-out-button large-button black-button">
+                    <span>품절</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// PPT.20 상품상세, 상품리뷰, 배송/교환/반품 종료-->
+
+    <!--📌 
+      PPT.16 장바구니 팝업 노출
+      * 장바구니 버튼 클릭 시 
+    -->
+    <div class="pop popRenewalPop cartConfirmPop">
+      <div class="pop_title center">
+        <h2>장바구니 담기 완료</h2>
+        <a class="pop_close popRenewalPop_close cartConfirmPop_close">
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
+      </div>
+      <div class="pop_content cartConfirmPop_content center">
+        <p>선택하신 상품이 장바구니에 추가 되었습니다.</p>
+      </div>
+      <div class="pop_button two-buttons">
+        <a class="cartConfirmPop_close Bgrey-button middle-button height45">쇼핑 계속하기</a>
+        <a href="" class="black-button middle-button height45">장바구니 확인</a>
+      </div>
+    </div>
+    <div class="pop_bg cartConfirmPop_bg"></div>
+
+    <!--📌 
+      PPT.17 사이즈가이드 팝업 노출
+      * 사이즈가이드 버튼 클릭 시
+    -->
+    <div class="pop popRenewalPop sizeGuidePop w1200Pop">
+      <div class="pop_title center">
+        <h2>사이즈 가이드</h2>
+        <a class="pop_close popRenewalPop_close sizeGuidePop_close">
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
+      </div>
+      <div class="pop_content sizeGuidePop_content">
+        <ul class="size-tab">
+          <li class="active">
+            <a>WOMEN APPAREL</a>
+          </li>
+          <li>
+            <a>WOMEN SHOES</a>
+          </li>
+          <li>
+            <a>MEN APPRAEL</a>
+          </li>
+          <li>
+            <a>MEN SHOES</a>
+          </li>
+        </ul>
+        <ul class="size-content">
+          <li class="active">
+            <div class="size_table">
+              <div class="table_head">
+                <div class="table_td">사이즈1</div>
+                <div class="table_td">사이즈2</div>
+                <div class="table_td">사이즈3</div>
+                <div class="table_td">사이즈4</div>
+                <div class="table_td">사이즈5</div>
+                <div class="table_td">사이즈6</div>
+              </div>
+              <div class="table_body">
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="size_table">
+              <div class="table_head">
+                <div class="table_td">WOMEN SHOES 사이즈1</div>
+                <div class="table_td">사이즈2</div>
+                <div class="table_td">사이즈3</div>
+                <div class="table_td">사이즈4</div>
+                <div class="table_td">사이즈5</div>
+                <div class="table_td">사이즈6</div>
+              </div>
+              <div class="table_body">
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="size_table">
+              <div class="table_head">
+                <div class="table_td">MEN APPAREL 사이즈1</div>
+                <div class="table_td">사이즈2</div>
+                <div class="table_td">사이즈3</div>
+                <div class="table_td">사이즈4</div>
+                <div class="table_td">사이즈5</div>
+                <div class="table_td">사이즈6</div>
+              </div>
+              <div class="table_body">
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <div class="size_table">
+              <div class="table_head">
+                <div class="table_td">MEN SHOES 사이즈1</div>
+                <div class="table_td">사이즈2</div>
+                <div class="table_td">사이즈3</div>
+                <div class="table_td">사이즈4</div>
+                <div class="table_td">사이즈5</div>
+                <div class="table_td">사이즈6</div>
+              </div>
+              <div class="table_body">
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+                <div class="table_tr">
+                  <div class="table_td">US 2</div>
+                  <div class="table_td">2</div>
+                  <div class="table_td">4, 6</div>
+                  <div class="table_td">8, 10</div>
+                  <div class="table_td">12, 14</div>
+                  <div class="table_td">16, 18</div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="size-caption">
+          <p>브랜드 마다 사이즈와 핏이 다르기 때문에, 사이즈 차트는 참고용입니다.</p>
+          <p>사이즈나 FIT에 관해 궁금한 사항이 있다면, 하단 Q&A를 이용해 주세요.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pop_bg sizeGuidePop_bg"></div>
+
+    <!--📌 
+      PPT.18 재입고 알림 신청 팝업
+      * 재입고 알림 신청 버튼 클릭 시
+    -->
+    <div class="pop popRenewalPop restockPop padding25">
+      <div class="pop_title center">
+        <h2>재입고 알림 신청</h2>
+        <a class="pop_close popRenewalPop_close restockPop_close">
+          <span class="line"></span>
+          <span class="line"></span>
+        </a>
+      </div>
+      <div class="pop_content restockPop_content">
+        <div class="restock_item">
+          <div class="restock_item-image">
+            <img src="../img/img_product1.jpg" alt="재입고 알림 신청 이미지1">
+          </div>
+          <div class="restock_item-info">
+            <p>NIKE</p>
+            <h5>Graphic Print Sweater</h5>
+          </div>
+        </div>
+        <div class="restock_option">
+          <ul>
+            <li>
+              <label for="">색상</label>
+              <select name="" id="" class="custom-select">
+                <option value="">선택해 주세요.</option>
+                <option value="색상1">색상1</option>
+                <option value="색상2">색상2</option>
+              </select>
+            </li>
+            <li>
+              <label for="">사이즈</label>
+              <select name="" id="" class="custom-select">
+                <option value="">선택해 주세요.</option>
+                <option value="사이즈1">사이즈1</option>
+                <option value="사이즈2">사이즈2</option>
+              </select>
+            </li>
+            <li>
+              <label for="">연락 받을 번호</label>
+              <p>010-12**-**23</p>
+            </li>
+          </ul>
+        </div>
+        <div class="restock_caption">
+          <p>신청일로부터 최대 1개월 이내 재입고가 될 경우 알림이 발송됩니다.</p>
+          <p>재입고 알림신청은 최대 10개까지 가능합니다.</p>
+          <p>신청 상품의 옵션 및 가격 등의 상품 정보가 변동될 수 있으니 재입고 시 상품정보 확인 후 구매하시기 바랍니다.</p>
+          <p>소량 재입고 되거나 구매가 몰릴 경우 재입고 알림 후에도 품절로 표기될 수 있습니다.</p>
+          <p>재입고 알림 신청 상품은 마이페이지 > 재입고 알림 신청에서 확인 가능합니다.</p>
+          <p>상품의 입고 시점에 따라 1회 발송되며, 이미 발송된 재입고 알림은 재발송 되지 않습니다.</p>
+          <p>휴대폰번호 수정을 원하시면 마이페이지 > 개인정보수정 메뉴에서 수정 후 신청해주시길 바랍니다.</p>
+        </div>
+      </div>
+      <div class="pop_button two-buttons">
+        <a class="black-button middle-button height45">신청하기</a>
+        <a class="restockPop_close Bgrey-button middle-button height45">취소</a>
+      </div>
+    </div>
+    <div class="pop_bg restockPop_bg"></div>
   </section>
   <footer class="footer">
     <div class="footer__container">
