@@ -492,6 +492,32 @@ input:checked + label .ico_review {
   }
 }
 
+.ico_LstarR {
+  width: 23px;
+  height: 21px;
+  background: url("../img/starR.png") no-repeat;
+}
+@media (max-width: 768px) {
+  .ico_LstarR {
+    width: 18px;
+    height: 16px;
+    background-size: 18px 16px;
+  }
+}
+
+.ico_LstarG {
+  width: 23px;
+  height: 21px;
+  background: url("../img/starG.png") no-repeat;
+}
+@media (max-width: 768px) {
+  .ico_LstarG {
+    width: 18px;
+    height: 16px;
+    background-size: 18px 16px;
+  }
+}
+
 .ico_best {
   width: 55px;
   height: 45px;

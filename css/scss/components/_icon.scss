@@ -45,6 +45,26 @@ input:checked + label .ico_review{
         background-position: -96px -192px;
     }
 }
+.ico_LstarR{
+    width:23px;
+    height:21px;
+    background:url('../img/starR.png') no-repeat;
+    @include mediaQuery(768px){
+        width: 18px;
+        height: 16px;
+        background-size:18px 16px;
+    }
+}
+.ico_LstarG{
+    width:23px;
+    height:21px;
+    background:url('../img/starG.png') no-repeat;
+    @include mediaQuery(768px){
+        width: 18px;
+        height: 16px;
+        background-size:18px 16px;
+    }
+}
 .ico_best{
     width: 55px;
     height: 45px;

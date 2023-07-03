@@ -48,7 +48,7 @@ var recommandSwiper = new Swiper('.recommand-slider .items-wrap', {
         disableOnInteraction: false,
     },
     pagination : {
-		el : '.reviewPhotoPop_content .swiper-pagination',
+		el : '.recommand-slider .swiper-pagination',
 		clickable : true, 
 	},
     navigation: {
@@ -89,7 +89,7 @@ var attentionSwiper = new Swiper('.attention-slider .items-wrap', {
         disableOnInteraction: false,
     },
     pagination : {
-		el : '.reviewPhotoPop_content .swiper-pagination',
+		el : '.attention-slider .swiper-pagination',
 		clickable : true, 
 	},
     navigation: {
@@ -239,4 +239,53 @@ $('.product-content-tab li').each(function(idx){
         $('.product-content-tab li').removeClass('active');
         $(this).addClass('active');
     });
+});
+
+/*📌 PPT.25 신고사유 팝업 노출 */
+popOpen(".badCommentPop", ".badCommentPop_bg", ".badCommentPop_open")
+popClose(".badCommentPop", ".badCommentPop_bg", ".badCommentPop_close")
+$("input[name='report']").on("change", function(){
+    if($(this).val() === 'etc'){
+        $(".badCommentPop .badCommentPop_textarea textarea").attr('disabled',false);
+        $(".badCommentPop .badCommentPop_textarea textarea").focus();
+    }else{
+        $(".badCommentPop .badCommentPop_textarea textarea").attr('disabled',true);
+        //$(".badCommentPop .badCommentPop_textarea textarea").val('');
+    }
+});
+$(".badCommentPop_open").on("click", function(){
+    //신고사유 팝업 노출 시, 리뷰 상세 팝업이 켜져있다면
+    $(".reviewDetailPop.active").removeClass("active");
+    $(".reviewDetailPop_bg.active").removeClass("active");
+});
+
+/*📌 PPT.26 리뷰상세 팝업 설정 및 노출 */
+var smallSwiper = new Swiper(".reviewPop-slider .swiper-container", {
+    loop: true,
+    spaceBetween: 15,
+    slidesPerView: 1,
+    navigation: {
+        nextEl: ".reviewPop-slider .swiper-button-next",
+        prevEl: ".reviewPop-slider .swiper-button-prev",
+    },
+    pagination: {
+        el: ".reviewPop-slider .swiper-pagination",
+        type: "fraction"
+    },
+});
+popOpen(".reviewDetailPop", ".reviewDetailPop_bg", ".reviewDetailPop_open")
+popClose(".reviewDetailPop", ".reviewDetailPop_bg", ".reviewDetailPop_close")
+$(".reviewDetailPop_open").on("click", function(){
+    //리리뷰 상세 팝업 노출 시, 리뷰 전체보기 팝업이 켜져있다면
+    $(".reviewTotalPop.active").removeClass("active");
+    $(".reviewTotalPop_bg.active").removeClass("active");
+});
+
+/*📌 PPT.27 리뷰토탈 팝업 설정 및 노출 */
+popOpen(".reviewTotalPop", ".reviewTotalPop_bg", ".reviewTotalPop_open")
+popClose(".reviewTotalPop", ".reviewTotalPop_bg", ".reviewTotalPop_close")
+$(".reviewTotalPop_open").on("click", function(){
+    //리뷰 전체보기 팝업 노출 시, 리뷰 상세 팝업이 켜져있다면
+    $(".reviewDetailPop.active").removeClass("active");
+    $(".reviewDetailPop_bg.active").removeClass("active");
 });
