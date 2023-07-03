@@ -47,7 +47,14 @@ var recommandSwiper = new Swiper('.recommand-slider .items-wrap', {
         delay: 5000,
         disableOnInteraction: false,
     },
-    dots: true,
+    pagination : {
+		el : '.reviewPhotoPop_content .swiper-pagination',
+		clickable : true, 
+	},
+    navigation: {
+        nextEl: ".recommand-slider .swiper-button-next",
+        prevEl: ".recommand-slider .swiper-button-prev",
+    },
     breakpoints: {
         350:{
             slidesPerView:2,
@@ -63,7 +70,7 @@ var recommandSwiper = new Swiper('.recommand-slider .items-wrap', {
         },
         1200:{
             slidesPerView: 4,
-            spaceBetween:30, 
+            spaceBetween:15, 
         }
     }
 });
@@ -81,7 +88,14 @@ var attentionSwiper = new Swiper('.attention-slider .items-wrap', {
         delay: 5000,
         disableOnInteraction: false,
     },
-    dots: true,
+    pagination : {
+		el : '.reviewPhotoPop_content .swiper-pagination',
+		clickable : true, 
+	},
+    navigation: {
+        nextEl: ".attention-slider .swiper-button-next",
+        prevEl: ".attention-slider .swiper-button-prev",
+    },
     breakpoints: {
         350:{
             slidesPerView:2,
@@ -97,7 +111,7 @@ var attentionSwiper = new Swiper('.attention-slider .items-wrap', {
         },
         1200:{
             slidesPerView: 4,
-            spaceBetween:30, 
+            spaceBetween:15, 
         }
     }
 });
@@ -201,7 +215,6 @@ $(".detail-cont .detail_moreBtn").on("click", function(){
 });
 
 /*📌 PPT.20 상세정보, 상품리뷰, 배송교환반품 스크롤 제어 */
-
 $(window).on('scroll',function(){
     $(".product-cont-wrap .product-cont").each(function(idx,item){
         var productContOffsetTop = $(item).offset().top;
@@ -215,6 +228,15 @@ $(window).on('scroll',function(){
             $('.product-content-tab li').removeClass("active");
             $('.product-content-tab li').eq(2).addClass("active");
         }
-
+    });
+});
+/*📌 PPT.20 상세정보, 상품리뷰, 배송교환반품 클릭 시 탭 이동 */
+$('.product-content-tab li').each(function(idx){
+    $(this).on('click',function(){
+        var menuHeight = $(".product-content-tab").height();
+        var tabCont = $('.product-cont-wrap .product-cont').eq(idx).offset().top - menuHeight + 1;
+        $('html,body').animate({scrollTop:tabCont},0);
+        $('.product-content-tab li').removeClass('active');
+        $(this).addClass('active');
     });
 });
